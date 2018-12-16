@@ -1,0 +1,144 @@
+body {
+  font: 400 16px roboto, helvetica, arial;
+  color: #2c2c2c;
+}
+
+h1 {
+  margin-left: 40px;
+}
+
+.box1 {
+	margin-left: 40px;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box2 {
+	margin-right: 40px;
+	display: inline-block;
+}
+
+.chart {
+	width: 900px;
+	padding-left: 50px;
+	margin: auto;
+	position: relative;
+	display: flex;  
+	justify-content: space-between;  
+	border-bottom: 1px solid #d7d7d9;
+	padding-top: 110px;
+	}
+	
+.chart .yearLabel {
+	position: absolute;
+	top: 0;
+	left: 50px;
+	width: 900px;
+	text-align: right;
+	z-index: 1;
+	font-size: 32px;
+	
+}
+
+.chart .yLabels {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 100%;
+	height: 400px;
+	display: flex;
+	justify-content: space-between;  
+	flex-direction: column;
+	text-align: left;
+	z-index: 1;
+	padding-top: 110px;
+}
+	
+.chart .yLabels .yLabel {
+    flex-grow: 1;
+	border-top: 1px solid #d7d7d9;
+}
+
+.chart .xLabels {
+	position: absolute;
+	top: 0;
+	left: 50px;
+	width: 900px;
+	height: 400px;
+	display: flex;
+	justify-content: space-between;  
+	flex-direction: row;
+	text-align: left;
+	z-index: 1;
+	padding-bottom: 30px;
+	padding-top: 50px;
+	/*background-color: blue;*/
+	
+}
+	
+.chart .xLabels .xLabel {
+	flex-grow: 2;
+	text-align: center;	
+}
+
+.chart .xLabels .xLabelLeft {
+	flex-grow: 1;
+	text-align: left;	
+}
+
+.chart .xLabels .xLabelRight {
+	flex-grow: 1;
+	text-align: right;	
+}
+
+
+.chart svg polyline {
+	fill:none;
+}
+
+/* Slider */
+
+.container {
+    width: 65%;
+	margin: auto;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+	color: #2c2c2c;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #2c2c2c;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slidercontainer {
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}

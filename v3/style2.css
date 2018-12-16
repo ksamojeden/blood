@@ -1,0 +1,33 @@
+body {
+  font: 400 16px roboto, helvetica, arial;
+  color: #2c2c2c;
+}
+
+h1 {
+  margin-left: 40px;
+}
+	
+.chart .yearLabel {
+	position: absolute;
+	top: 0;
+	left: 50px;
+	width: 900px;
+	text-align: right;
+	z-index: 1;
+	font-size: 32px;
+	
+}
+
+svg polyline {
+	fill:none;
+}
+
+svg .yearLabel {
+	font: 400 32px roboto, helvetica, arial;
+}
+
+.container {
+    width: 65%;
+	margin: auto;
+}
+
