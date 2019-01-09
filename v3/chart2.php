@@ -1,9 +1,9 @@
  <?php
 	class chart {
 		public $height = 540;
-		public $width = 990;
+		public $width = 790;
 		public $chartHeight = 400;
-		public $chartWidth = 900;
+		public $chartWidth = 700;
 		public $xLabelHeight = 60;
 		public $yLabelWidth = 50;
 		public $yearLabelHeight = 50;

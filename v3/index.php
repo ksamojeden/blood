@@ -25,16 +25,24 @@
 	
 ?>	
 
-	<h1>Przykład prezentacji danych za pomocą grfiki SVG</h1>
 	<div class="container">
-		<form id="myForm" action="./index.php" method="post">
-			<select name="noOfDays" onchange="myFunction()">
-				<option value="7">--</option>
-				<option value="7">Tydzień</option>
-				<option value="14">Dwa tygodnie</option>
-			</select>
-		</form>
-		<svg height="<?php echo $chart1->height;?>" width="<?php echo $chart1->width;?>">
+		<h1>Przykład prezentacji danych za pomocą grafiki SVG</h1>
+		<hr class="my-4">
+		<div class="container" style="margin:10px"></div>
+		
+		<p class="col-lg-1 lead">Okres:</p>
+		<div class="col-lg-3">
+			<form id="myForm" action="./index.php" method="post">
+				<select class="form-control" name="noOfDays" onchange="myFunction()">
+					<option value="7">--</option>
+					<option value="7">7 dni</option>
+					<option value="10">10 dni</option>
+					<option value="14">14 dni</option>
+				</select>
+			</form>
+		</div>
+		
+		<svg width="100%" viewbox="0 0 <?php echo $chart1->width . ' ' . $chart1->height;?> ">
 						
 			<!-- year -->
 			<text x="<?php echo $chart1->yLabelWidth + $chart1->chartWidth - 75; ?>" y="45" class="yearLabel"><?php echo $chart1->year; ?></text>
@@ -68,10 +76,11 @@
 			?>	
 			
 		</svg>
+		
 		<div class="buttonBox">
 		<form id="myForm2" action="./index.php" method="post">
-			<button name="arrow" type="submit" value="-1">&#x2190;</button>
-			<button name="arrow" type="submit" value="1">&#x2192;</button>
+			<button class="btn btn-default btn-lg" name="arrow" type="submit" value="-1">&#x2190;</button>
+			<button class="btn btn-default btn-lg" name="arrow" type="submit" value="1">&#x2192;</button>
 		</form>
 		</div>
 
